@@ -1,0 +1,14 @@
+[project]
+name = "paypal-checkout-agent"
+version = "0.1.0"
+description = "A natural-language checkout agent: an LLM plans structured tool calls that create, capture and refund PayPal sandbox orders."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+paypal-checkout-agent = "paypal_checkout_agent.cli:main"
+
+[tool.setuptools]
+packages = ["paypal_checkout_agent", "paypal_checkout_agent.payments", "paypal_checkout_agent.llm"]
